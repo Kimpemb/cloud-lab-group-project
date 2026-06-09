@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Meet the Cloud Tech GROUP 17 engineering team — five specialists driving the Web Application Development project across leadership, infrastructure, design, content, and security.">
+  <title>Team Directory — Cloud Tech GROUP 17</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icons8-code-100.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-about">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header>
+    <a href="index.html" class="logo" id="site-logo">Cloud Tech</a>
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="about.html" class="active" id="nav-team">Team</a></li>
+        <li><a href="contact.html" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-trigger" id="menu-trigger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-nav-link" id="mnav-home">Home</a>
+      <a href="about.html" class="mobile-nav-link active" id="mnav-team">Team</a>
+      <a href="contact.html" class="mobile-nav-link" id="mnav-contact">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span class="mobile-menu-label">Cloud Tech — GROUP 17</span>
+      <span class="mobile-menu-label">Web Application Development</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="bento-section" aria-labelledby="team-directory-heading">
+      <div class="bento-header page-wrapper">
+        <div>
+          <p class="section-kicker">Team Roster</p>
+          <h1 class="section-heading" id="team-directory-heading">Engineering<br>Directory</h1>
+        </div>
+        <span class="tag">5 Active Members</span>
+      </div>
+
+      <div class="bento-grid" role="list" aria-label="Team members">
+
+        <article class="bento-card card-1" role="listitem" id="member-card-1">
+          <div class="member-image-frame">
+            <div class="image-grid-overlay" aria-hidden="true"></div>
+            <img
+              src="images/member-1.svg"
+              alt="Portrait of Erica Amoako, Frontend UI/UX Systems Architect"
+              id="member-img-1"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+          </div>
+          <div class="member-data">
+            <span class="member-index" aria-hidden="true">01 / 05</span>
+            <h2 class="member-name">Benedict Adofo</h2>
+            <span class="member-role">Frontend UI/UX Systems Architect</span>
+            <p class="member-bio">Authors the visual design system, spatial layout grids, and interactive motion language for all public-facing interfaces.</p>
+          </div>
+        </article>
+
+        <article class="bento-card card-2" role="listitem" id="member-card-2">
+          <div class="member-image-frame">
+            <div class="image-grid-overlay" aria-hidden="true"></div>
+            <img
+              src="images/member-2.svg"
+              alt="Portrait of Joshua Williams, Content Director and Data Analyst"
+              id="member-img-2"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+          </div>
+          <div class="member-data">
+            <span class="member-index" aria-hidden="true">02 / 05</span>
+            <h2 class="member-name">Edwin Ampratwum</h2>
+            <span class="member-role">Content Director &amp; Data Analyst</span>
+            <p class="member-bio">Structures the information architecture, editorial copy, and data layer integrations across all platform pages.</p>
+          </div>
+        </article>
+
+        <article class="bento-card card-3" role="listitem" id="member-card-3">
+          <div class="member-image-frame">
+            <div class="image-grid-overlay" aria-hidden="true"></div>
+            <img
+              src="images/member-3.svg"
+              alt="Portrait of Benedict Adofo, Project Lead and Core Systems Engineer"
+              id="member-img-3"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+          </div>
+          <div class="member-data">
+            <span class="member-index" aria-hidden="true">03 / 05</span>
+            <h2 class="member-name">Erica Amoako</h2>
+            <span class="member-role">Project Lead &amp; Core Systems Engineer</span>
+            <p class="member-bio">Oversees project architecture, milestone delivery, and cross-functional coordination across all engineering workstreams.</p>
+          </div>
+        </article>
+
+        <article class="bento-card card-4" role="listitem" id="member-card-4">
+          <div class="member-image-frame">
+            <div class="image-grid-overlay" aria-hidden="true"></div>
+            <img
+              src="images/member-4.svg"
+              alt="Portrait of Edwin Ampratwum, Git Infrastructure and Repository Manager"
+              id="member-img-4"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+          </div>
+          <div class="member-data">
+            <span class="member-index" aria-hidden="true">04 / 05</span>
+            <h2 class="member-name">Joshua Williams</h2>
+            <span class="member-role">Git Infrastructure &amp; Repository Manager</span>
+            <p class="member-bio">Maintains the version control pipeline, branch strategy, and repository hygiene for the full project lifecycle.</p>
+          </div>
+        </article>
+
+        <article class="bento-card card-5" role="listitem" id="member-card-5">
+          <div class="member-image-frame">
+            <div class="image-grid-overlay" aria-hidden="true"></div>
+            <img
+              src="images/member-5.svg"
+              alt="Portrait of the Security Engineer and QA Lead"
+              id="member-img-5"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+          </div>
+          <div class="member-data">
+            <span class="member-index" aria-hidden="true">05 / 05</span>
+            <h2 class="member-name">Mubarik Zakair</h2>
+            <span class="member-role">Security Engineer &amp; QA Lead</span>
+            <p class="member-bio">Leads security architecture reviews, test coverage strategy, and quality assurance validation across all system deliverables.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="page-footer" role="contentinfo">
+      <span class="footer-copy">Cloud Tech — GROUP 17 — Web Application Development</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html" id="footer-home">Home</a>
+        <a href="about.html" id="footer-team">Team</a>
+        <a href="contact.html" id="footer-contact">Contact</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Reach the Cloud Tech GROUP 17 team directly. Submit a project inquiry through the technical communication interface.">
+  <title>Contact — Cloud Tech GROUP 17</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icons8-code-100.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header>
+    <a href="index.html" class="logo" id="site-logo">Cloud Tech</a>
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-team">Team</a></li>
+        <li><a href="contact.html" class="active" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-trigger" id="menu-trigger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-nav-link" id="mnav-home">Home</a>
+      <a href="about.html" class="mobile-nav-link" id="mnav-team">Team</a>
+      <a href="contact.html" class="mobile-nav-link active" id="mnav-contact">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span class="mobile-menu-label">Cloud Tech — GROUP 17</span>
+      <span class="mobile-menu-label">Web Application Development</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="contact-outer" aria-label="Contact interface">
+
+      <div class="contact-left">
+        <p class="section-kicker">Reach the Team</p>
+        <h1 class="contact-tagline">
+          Technical<br>
+          <em>Communication</em><br>
+          Interface
+        </h1>
+        <p class="contact-descriptor">
+          Submit a project inquiry, academic question, or collaboration request directly to the Cloud Tech GROUP 17 engineering team.
+        </p>
+
+        <ul class="contact-meta-list" aria-label="Contact metadata">
+          <li>
+            <span class="cml-label">Response Time</span>
+            <span class="cml-val">Within 48 hours</span>
+          </li>
+          <li>
+            <span class="cml-label">Course</span>
+            <span class="cml-val">Web Application Development</span>
+          </li>
+          <li>
+            <span class="cml-label">Group</span>
+            <span class="cml-val">GROUP 17</span>
+          </li>
+          <li>
+            <span class="cml-label">Platform</span>
+            <span class="cml-val">Academic Web Project</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-form-header">
+          <p class="form-eyebrow">Transmission Protocol</p>
+          <p class="form-title">Send a Direct Message</p>
+        </div>
+
+        <form
+          class="contact-form"
+          id="contact-form"
+          onsubmit="handleFormSubmit(event)"
+          novalidate
+        >
+          <div class="field-row" id="field-row-name">
+            <label class="field-label" for="input-name">Full Name</label>
+            <input
+              class="field-input"
+              type="text"
+              id="input-name"
+              name="name"
+              autocomplete="name"
+              required
+              minlength="2"
+              placeholder="Your full name"
+            >
+            <span class="field-underline" aria-hidden="true"></span>
+          </div>
+
+          <div class="field-row" id="field-row-email">
+            <label class="field-label" for="input-email">Email Address</label>
+            <input
+              class="field-input"
+              type="email"
+              id="input-email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="your@email.com"
+            >
+            <span class="field-underline" aria-hidden="true"></span>
+          </div>
+
+          <div class="field-row" id="field-row-message">
+            <label class="field-label" for="input-message">Project Description</label>
+            <textarea
+              class="field-textarea"
+              id="input-message"
+              name="message"
+              required
+              minlength="10"
+              placeholder="Describe your inquiry or project scope..."
+            ></textarea>
+            <span class="field-underline" aria-hidden="true"></span>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn-primary" type="submit" id="contact-submit">
+              Transmit
+              <span class="btn-arrow" aria-hidden="true">&#8594;</span>
+            </button>
+            <span class="submit-note" aria-live="polite" id="submit-note"></span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <footer class="page-footer" role="contentinfo">
+      <span class="footer-copy">Cloud Tech — GROUP 17 — Web Application Development</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html" id="footer-home">Home</a>
+        <a href="about.html" id="footer-team">Team</a>
+        <a href="contact.html" id="footer-contact">Contact</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('contact-form');
+      var btn = document.getElementById('contact-submit');
+      var note = document.getElementById('submit-note');
+
+      btn.disabled = true;
+      btn.textContent = 'Transmitting..';
+      note.textContent = '';
+
+      setTimeout(function () {
+        btn.disabled = false;
+        btn.innerHTML = 'Transmit <span class="btn-arrow" aria-hidden="true">&#8594;</span>';
+        note.textContent = 'Message received.';
+        form.reset();
+        setTimeout(function () { note.textContent = ''; }, 4000);
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
