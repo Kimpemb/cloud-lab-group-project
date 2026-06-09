@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="GROUP 17 — Web Application Development university project: a decentralized educational marketplace optimizing tutor matching, course delivery, and peer learning infrastructures.">
+  <title>Cloud Tech - Group Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icons8-code-100.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header>
+    <a href="index.html" class="logo" id="site-logo">Cloud Tech</a>
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-team">Team</a></li>
+        <li><a href="contact.html" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-trigger" id="menu-trigger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-nav-link active" id="mnav-home">Home</a>
+      <a href="about.html" class="mobile-nav-link" id="mnav-team">Team</a>
+      <a href="contact.html" class="mobile-nav-link" id="mnav-contact">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span class="mobile-menu-label">Cloud Tech — GROUP 17</span>
+      <span class="mobile-menu-label">Web Application Development</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero-section" aria-label="Project introduction">
+      <div class="hero-top-bar">
+        <span class="tag">Academic Research Platform</span>
+        <span class="label-dim">FY 2025 / 2026</span>
+      </div>
+
+      <div class="hero-main">
+        <div class="hero-title-col">
+          <h1 class="display-heading">
+            <strong>Cloud Tech</strong><br>
+            Systems
+          </h1>
+          <div class="course-divider">
+            <span class="rule-accent"></span>
+            <span class="course-title">Web Application Development</span>
+          </div>
+        </div>
+
+        <div class="hero-meta-col">
+          <div class="meta-stat">
+            <span class="meta-label">Project Status</span>
+            <span class="meta-value">Active Development</span>
+          </div>
+          <div class="meta-stat">
+            <span class="meta-label">Course Track</span>
+            <span class="meta-value">Web Application Development</span>
+          </div>
+          <div class="meta-stat">
+            <span class="meta-label">Team Size</span>
+            <span class="meta-value">5 Engineers</span>
+          </div>
+          <div class="meta-stat">
+            <span class="meta-label">Deliverable Type</span>
+            <span class="meta-value">Static Web Platform</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom-bar">
+        <span class="status-pill"><span class="dot" aria-hidden="true"></span>System Online</span>
+        <span class="label-dim">Canvas Physics Active</span>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="project-scope-heading">
+      <div class="project-grid">
+        <div class="project-left">
+          <p class="section-kicker">Project Scope Matrix</p>
+          <h2 class="section-heading" id="project-scope-heading">Technical<br>Overview</h2>
+
+          <p class="project-body">
+            An advanced, decentralized educational marketplace architecture designed to optimize tutor matching metrics, aggregate course delivery streams, and establish lightweight peer learning infrastructures natively within high-performance student hubs.
+          </p>
+
+          <ul class="scope-list" aria-label="Project scope items">
+            <li>High-performance canvas particle rendering pipeline</li>
+            <li>Asymmetric bento grid team directory system</li>
+            <li>Brutalist contact communication interface</li>
+            <li>Unified CSS design token architecture</li>
+          </ul>
+        </div>
+
+        <div class="project-right" aria-label="Project visual asset">
+          <div class="asset-frame" id="project-asset-frame">
+            <img
+              src="images/project.svg"
+              alt="Project visual representation — Cloud Tech GROUP 17"
+              id="project-hero-img"
+              onerror="this.closest('.asset-frame').innerHTML = document.getElementById('asset-fallback-tpl').innerHTML;"
+            >
+            <span class="asset-corner tl" aria-hidden="true"></span>
+            <span class="asset-corner tr" aria-hidden="true"></span>
+            <span class="asset-corner bl" aria-hidden="true"></span>
+            <span class="asset-corner br" aria-hidden="true"></span>
+          </div>
+          <template id="asset-fallback-tpl">
+            <div class="asset-fallback">
+              <span class="fallback-label">Visual Asset</span>
+              <span class="fallback-path">images/project.jpg</span>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer" role="contentinfo">
+      <span class="footer-copy">Cloud Tech — GROUP 17 — Web Application Development</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html" id="footer-home">Home</a>
+        <a href="about.html" id="footer-team">Team</a>
+        <a href="contact.html" id="footer-contact">Contact</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
